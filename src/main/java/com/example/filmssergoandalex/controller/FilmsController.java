@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping(path="/films")
+@RequestMapping(path = "/films")
 @CrossOrigin(origins = "*", maxAge = 3600)
 @AllArgsConstructor
 public class FilmsController {
