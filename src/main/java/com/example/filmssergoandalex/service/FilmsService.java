@@ -15,4 +15,12 @@ public class FilmsService {
     public List<FilmsItem> getAll(){
         return filmsRepository.findAll();
     }
+
+    public void deleteById(int id){
+        filmsRepository.deleteById(id);
+    }
+
+    public void addNew(FilmsItem filmsItem) {
+        filmsRepository.save(filmsItem);
+    }
 }

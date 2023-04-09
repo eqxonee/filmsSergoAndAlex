@@ -16,7 +16,17 @@ public class FilmsController {
 
     @GetMapping(value = "/getAll")
     public List<FilmsItem> getAll() {
-
         return filmsService.getAll();
+    }
+
+
+    @DeleteMapping(value = "/deleteById/{id}")
+    public void deleteById(@PathVariable int id) {
+        filmsService.deleteById(id);
+    }
+
+    @PostMapping(value = "/addNew")
+    public void addNew(@RequestBody FilmsItem filmsItem) {
+        filmsService.addNew(filmsItem);
     }
 }
