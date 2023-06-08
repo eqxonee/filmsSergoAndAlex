@@ -20,12 +20,6 @@ public class SecurityConfiguration {
     private final AuthenticationProvider authenticationProvider;
     private final SimpleCORSFilter simpleCORSFilter;
 
-//    @Bean
-//    CorsFilter corsFilter() {
-//        CorsFilter filter = new CorsFilter();
-//        return filter;
-//    }
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
